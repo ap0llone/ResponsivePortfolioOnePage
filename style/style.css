@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color: #ed2939;
+    --text-color: #808080;
+    --title-color: #fff;
+    --title2-color: #000;
+    --header-font: 'Josefin Sans', sans-serif;
+}
+/* --header section-- */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+}
+a.header-logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--title-color);
+}
+header span{
+    color: var(--main-color);
+}
+.header-list{
+    display: flex;
+}
+.header-list a{
+    color: var(--title-color);
+    padding: 12px;
+}
+.header-list a:hover{
+    color: var(--main-color);
+    transition: all .44s ease;
+}
+.header-list a.header-btn{
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 9px 13px;
+    margin-left: 20px;
+}
+.header-list a.header-btn:hover{
+    background-color: var(--main-color);
+    color: var(--title2-color);
+    transition: all .44s ease;
+}
+.header-list a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+	font-size: 35px;
+	color: var(--title-color);
+	cursor: pointer;
+	z-index: 10001;
+	display: none;
+}
+/* home section */
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.home-wrapper{
+    text-align: center;
+    padding-top: 12%;
+}
+.home-wrapper img{
+    width: 200px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.home-wrapper h1{
+    color: var(--main-color);
+    font-size: 60px;
+    margin-bottom: -10px;
+}
+.home-wrapper p{
+    color: var(--title-color);
+}
+.home-wrapper .home-icon a{
+    position: absolute;
+    left: 4%;
+    bottom: 5%;
+    font-size: 15px;
+    margin-left: 10px;
+    color: var(--title-color);
+}
+.home-wrapper .home-icon a:hover{
+    color: var(--main-color);
+}
+.home-wrapper .home-line{
+    position: absolute;
+    bottom: 6.5%;
+    width: 45px;
+    height: 2px;
+    margin-left: 12px;
+    background-color: var(--title-color);
+    cursor: pointer;
+}
+.home-wrapper .home-line:hover{
+    background-color: var(--main-color);
+}
+.home-icon:hover #left{
+    background-color: var(--main-color);
+}
+.home-icon:hover #right{
+    color: var(--main-color);
+}
+/* --responsive-- */
+@media (max-width: 1280px){
+	header{
+		padding: 14px 2%;
+		transition: .2s;
+	}
+	.navbar a{
+		padding: 5px 0;
+		margin: 0px 20px;
+	}
+}
+
+@media (max-width: 1090px){
+	#menu-icon{
+		display: block;
+	}
+	.header-list{
+		position: absolute;
+		top: -1000%;
+		right: 0;
+        left: 0;
+		background: var(--title2-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-radius: 10px;
+		transition: all .50s ease;
+	}
+	.header-list a{
+		display: block;
+		margin: 12px 0;
+		padding: 0px 25px;
+		transition: all .50s ease;
+	}
+	.header-list a:hover{
+		color: var(--main-color);
+	}
+	.header-list a.active{
+		color: var(--title-color);
+	}
+    .header-list a.active:hover{
+        color: var(--main-color);
+    }
+    .header-list a.header-btn{
+        display: none;
+    }
+	.header-list.open{
+		top: 80%;
+        border-radius: 4px;
+	}
+    .header-open{
+     background-color: var(--title2-color);
+    }
+}
+@media(max-width:1155px){
+    .home-icon a{
+        padding-left: 10px;
+    }
+}
+@media(max-width:935px){
+    .home-icon a{
+        padding-left: 15px;
+    }
+}
+@media(max-width:770px){
+    .home-wrapper{
+        padding: 0;
+        padding-top: 23%;
+    }
+    .home-icon a{
+        padding-left: 20px;
+    }
+}
+@media(max-width:662px){
+    .home-wrapper{
+        padding: 0;
+        padding-top: 28%;
+    }
+    .home-icon a{
+        padding-left: 25px;
+    }
+}
+@media(max-width:590px){
+    .home-wrapper{
+        padding: 0;
+        padding-top: 33%;
+    }
+    .home-icon a{
+        padding-left: 30px;
+    }
+}
+@media(max-width:500px){
+    .home-wrapper{
+        padding: 0;
+        padding-top: 40%;
+    }
+    .home-wrapper img{
+        width: 180px;
+    }
+    .home-wrapper h1{
+        font-size: 45px;
+    }
+    .home-wrapper p{
+        font-size: 15px;
+    }
+}
